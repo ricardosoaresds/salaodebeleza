@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BlackSalon</title>
 
+    <!-- ICONS -->
+    <link rel="stylesheet" href="assets/style.css" />
+
     <!--STYLES-->
     <link rel="stylesheet" href="style.css" />
 
@@ -21,19 +24,19 @@
     <header id="header">
       <nav class="container">
         <a class="logo" href="#">TheBlack<span>salon.</span></a>
-        <!-- MENU-->
+        <!----- MENU ------>
         <div class="menu">
-          <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#testimonials">Depoimentos</a></li>
-            <li><a href="contact">Contato</a></li>
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
           </ul>
         </div>
-        <!-- /MENU-->
-        <div class="close">...</div>
-        <div class="open">x</div>
+        <!------ /MENU ------->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
     <main>
@@ -46,12 +49,12 @@
             />
           </div>
           <div class="text">
-            <h1>Saúde natural para os seus cachos</h1>
+            <h2 class="title">Saúde natural para os seus cachos</h2>
             <p>
               Um salão exclusivo em São Paulo, especializado em tratamentos
               naturais para cabelos cacheados
             </p>
-            <a class="button" href="#">Agendar um Horário</a>
+            <a class="button" href="#">Agende seu Horário</a>
           </div>
         </div>
       </section>
@@ -64,6 +67,8 @@
         <div class="container grid">Serviços</div>
       </section>
     </main>
+
+    <script src="main.js"></script>
 
     <footer></footer>
   </body>

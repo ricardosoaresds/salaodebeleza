@@ -39,7 +39,28 @@ const swiper = new Swiper('.swiper-container', {
   slidesPerview: 1,
   pagination: {
     el: '.swiper-pagination'
-  }
+  },
   mousewheel: true,
   Keyboard: true
 })
+
+/*
+/*ScrollReveal: Show the elements when the users roll the scroll on page*/
+
+const scrollReveal = ScrollReveal({
+  origin: 'top',
+  distance: '30px',
+  duration: 700,
+  reset: true
+})
+
+scrollReveal.reveal(
+  `
+  #home .text, #home .image,
+  #about .text, #about .image,
+  #services header, #services .card,
+  #testimonials header, #testimonials .testimonials,
+  #contact .text, #contact .links
+  `,
+  { internal: 100 }
+)

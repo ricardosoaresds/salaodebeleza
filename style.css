@@ -79,14 +79,6 @@ body {
   );
 }
 
-.divider-2 {
-  height: 1px;
-  background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 65%, 88%, 0.34) hsla(var(--hue), 36%, 57%, 1)
-  );
-}
-
 /* ================= Layout ================== */
 /* convert px to rem */
 /*Identifiers are represented by # */
@@ -102,7 +94,7 @@ body {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 4rem 0;
 }
 
 .section .title {
@@ -148,6 +140,17 @@ main {
 
 .logo span {
   color: var(--base-color);
+}
+
+.logo-alt{
+  font-weight: bold;
+  color: black;
+  font-size: large;
+}
+
+.logo-alt span{
+  color: var(--body-color);
+  font-size: large;
 }
 
 /* ======== NAVIGATION ======== */
@@ -463,3 +466,63 @@ nav.show div.icon-close {
 #contact ul li i{
   color: rgb(33, 87, 33);
 }
+
+/* ======== FOOTER ================*/
+footer{
+  background: var(--base-color);
+}
+
+footer .logo{
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer .brand{
+  color: var(--text-color-light);
+}
+
+footer .brand p{
+  margin-bottom: 12px;
+}
+
+footer i{
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+
+footer .social a{
+  margin-right: 2rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+footer .social a:hover{
+  transform: rotateY(-15px);
+}
+
+.back-to-top{
+  background: var(--base-color);
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  padding: 0.5rem;
+  clip-path: circle();
+
+  line-height: 0;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 0.3s;
+  transform: translateY(150%);
+}
+
+.back-to-top.show{
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+

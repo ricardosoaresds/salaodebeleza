@@ -34,7 +34,12 @@ img {
   --text-color: rgb(15, 0, 0);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /*--- Fonts --- */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem;
 }
+
 
 /* ============= BASE ================= */
 
@@ -50,7 +55,7 @@ body {
 }
 
 .title {
-  font: 700 1.5rem 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) 'Poppins', sans-serif;
   color: var(tittle-color);
   -webkit-font-smoothing: auto;
 }
@@ -99,6 +104,10 @@ body {
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+.section .subtitle{
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -525,4 +534,19 @@ footer .social a:hover{
   opacity: 1;
   transform: translateY(0);
 }
+
+/*========= MEDIA QUERIES ========= */
+/* extra large devices: 1200 > */
+/* large devices: 1023 > */
+/* large devices: 992 > */
+@media (min-width: 992px) {
+  :root{
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
+
+}
+/* medium devices: 767 > */
+
+
 

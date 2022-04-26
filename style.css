@@ -38,6 +38,9 @@ img {
   /*--- Fonts --- */
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM Sans', sans-serif;
 }
 
 
@@ -48,14 +51,14 @@ html {
 }
 
 body {
-  font: 400 1rem 'DM Sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 var(--title-font-size) 'Poppins', sans-serif;
+  font: 700 var(--title-font-size) var(--title-font);
   color: var(tittle-color);
   -webkit-font-smoothing: auto;
 }
@@ -67,7 +70,7 @@ body {
   align-items: center;
   display: inline-flex;
   padding: 0 2rem;
-  font: 500 1 rem 'DM Sans', sans-serif;
+  font: 500 1 rem var(--body-font);
   transition: background 0.3s;
 }
 
@@ -141,7 +144,7 @@ body {
 
 /* Class are represented by . */
 .logo {
-  font: 700 1.5rem 'Poppins', sans-serif;
+  font: 700 1.5rem var(--title-font);
   color: var(--text-color);
 }
 
@@ -544,12 +547,29 @@ footer .social a:hover{
 
 /*========= MEDIA QUERIES ========= */
 /* extra large devices: 1200 > */
+
+/*Reusable classes*/
 @media (min-width: 1200px){
+  .container{
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .section{
     padding: 10rem 0;
   }
 
+  .section header{
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+  /*NAVIGATION*/
   nav .menu{
     opacity: 1;
     visibility: visible;
@@ -561,9 +581,60 @@ footer .social a:hover{
     gap: 2rem;
   }
 
+  nav .menu ul li a.title{
+    font: 450 1.25rem var(--title-font);
+  }
+
+  nav .icon-menu{
+    display: none;
+  }
+
+
+  /*Layout*/
   main{
     margin-top: var(--header-height);
   }
+
+  /*HOme*/
+
+  #home .container{
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .text{
+    order: 0;
+    max-width: 30rem;
+    text-align: left;
+  }
+
+  #home .image{
+    order: 1;
+  }
+
+  /*ABOUT*/
+  #about .container{
+    margin: 0 auto;
+    grid-auto-flow: column ;
+  }
+
+  #about .text{
+    order: 0;
+  }
+  
+  /* Testimonials */
+  #testimonials header{
+    max-width: 32rem;
+    text-align: center;
+    margin-left: 400px;
+   
+    
+  }
+
+ 
+
+  
 }
 
 /*large devices: 1023 > */

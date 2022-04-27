@@ -42,7 +42,13 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  Keyboard: true
+  Keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 /*
